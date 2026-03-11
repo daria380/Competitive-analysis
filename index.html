@@ -1,1 +1,706 @@
-<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c1{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c3{background-color:#ffffff;max-width:451.4pt;padding:72pt 72pt 72pt 72pt}.c2{height:11pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c3 doc-content"><p class="c1"><span class="c0">&lt;!DOCTYPE html&gt;</span></p><p class="c1"><span class="c0">&lt;html lang=&quot;ru&quot;&gt;</span></p><p class="c1"><span class="c0">&lt;head&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;meta charset=&quot;UTF-8&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;title&gt;&#1054;&#1090;&#1095;&#1077;&#1090; &#1087;&#1086; &#1082;&#1086;&#1085;&#1082;&#1091;&#1088;&#1077;&#1085;&#1090;&#1085;&#1086;&#1084;&#1091; &#1072;&#1085;&#1072;&#1083;&#1080;&#1079;&#1091;&lt;/title&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;style&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; body {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; font-family: Arial, sans-serif;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 0;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 0;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background-color: #f4f4f4;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #333;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; header {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: #333;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: white;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 1rem;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-align: center;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; nav {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 1rem 0;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; nav a {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 0 15px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #333;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-decoration: none;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; section {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; display: none;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 20px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: white;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 10px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-radius: 5px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; section.active {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; display: block;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; h2 {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cursor: pointer;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; color: #007BFF;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; table {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; width: 100%;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border-collapse: collapse;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin-top: 20px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; table, th, td {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; border: 1px solid #ccc;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding: 10px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text-align: left;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; th {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; background: #f4f4f4;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; .hypotheses {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin-top: 20px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; @media (max-width: 600px) {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nav {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; flex-direction: column;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nav a {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; margin: 5px 0;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/style&gt;</span></p><p class="c1"><span class="c0">&lt;/head&gt;</span></p><p class="c1"><span class="c0">&lt;body&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;header&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;h1&gt;&#1054;&#1090;&#1095;&#1077;&#1090; &#1087;&#1086; &#1082;&#1086;&#1085;&#1082;&#1091;&#1088;&#1077;&#1085;&#1090;&#1085;&#1086;&#1084;&#1091; &#1072;&#1085;&#1072;&#1083;&#1080;&#1079;&#1091;&lt;/h1&gt;</span></p><p class="c1"><span class="c0">&lt;/header&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;nav&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;a href=&quot;#&quot; onclick=&quot;showSection(&#39;funnels&#39;)&quot;&gt;&#1042;&#1086;&#1088;&#1086;&#1085;&#1082;&#1080;&lt;/a&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;a href=&quot;#&quot; onclick=&quot;showSection(&#39;creatives&#39;)&quot;&gt;&#1050;&#1088;&#1077;&#1072;&#1090;&#1080;&#1074;&#1099;&lt;/a&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;a href=&quot;#&quot; onclick=&quot;showSection(&#39;pains&#39;)&quot;&gt;&#1041;&#1086;&#1083;&#1080;&lt;/a&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;a href=&quot;#&quot; onclick=&quot;showSection(&#39;platforms&#39;)&quot;&gt;&#1055;&#1083;&#1086;&#1097;&#1072;&#1076;&#1082;&#1080;&lt;/a&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;a href=&quot;#&quot; onclick=&quot;showSection(&#39;conclusions&#39;)&quot;&gt;&#1042;&#1099;&#1074;&#1086;&#1076;&#1099;&lt;/a&gt;</span></p><p class="c1"><span class="c0">&lt;/nav&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;section id=&quot;funnels&quot; class=&quot;active&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;h2&gt;&#1042;&#1086;&#1088;&#1086;&#1085;&#1082;&#1080;&lt;/h2&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;ul&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1054;&#1089;&#1085;&#1086;&#1074;&#1085;&#1099;&#1077; &#1090;&#1086;&#1095;&#1082;&#1080; &#1074;&#1093;&#1086;&#1076;&#1072;: &#1090;&#1077;&#1084;&#1072;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077; Telegram-&#1082;&#1072;&#1085;&#1072;&#1083;&#1099;, &#1073;&#1083;&#1086;&#1075;&#1080;, &#1090;&#1077;&#1084;&#1072;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077; &#1089;&#1086;&#1086;&#1073;&#1097;&#1077;&#1089;&#1090;&#1074;&#1072; &#1074; &#1089;&#1086;&#1094;&#1089;&#1077;&#1090;&#1103;&#1093;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1050;&#1091;&#1076;&#1072; &#1074;&#1077;&#1076;&#1091;&#1090; &#1087;&#1086;&#1089;&#1090;&#1099;: &#1085;&#1072; &#1089;&#1072;&#1081;&#1090; &#1089; &#1082;&#1091;&#1088;&#1089;&#1072;&#1084;&#1080;, &#1074; Telegram-&#1082;&#1072;&#1085;&#1072;&#1083; &#1080;&#1085;&#1089;&#1090;&#1080;&#1090;&#1091;&#1090;&#1072;, &#1085;&#1072; &#1073;&#1086;&#1090;&#1072; &#1074; Telegram&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1063;&#1072;&#1089;&#1090;&#1086; &#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1091;&#1102;&#1090;&#1089;&#1103; &#1084;&#1077;&#1093;&#1072;&#1085;&#1080;&#1082;&#1080; &#1089; &#1087;&#1088;&#1086;&#1084;&#1086;&#1082;&#1086;&#1076;&#1072;&#1084;&#1080;, &#1089;&#1082;&#1080;&#1076;&#1082;&#1072;&#1084;&#1080;, &#1073;&#1086;&#1085;&#1091;&#1089;&#1072;&#1084;&#1080;, &#1075;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1103;&#1084;&#1080; &#1090;&#1088;&#1091;&#1076;&#1086;&#1091;&#1089;&#1090;&#1088;&#1086;&#1081;&#1089;&#1090;&#1074;&#1072;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/ul&gt;</span></p><p class="c1"><span class="c0">&lt;/section&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;section id=&quot;creatives&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;h2&gt;&#1050;&#1088;&#1077;&#1072;&#1090;&#1080;&#1074;&#1099;&lt;/h2&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;ul&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1060;&#1086;&#1088;&#1084;&#1072;&#1090;&#1099;: &#1090;&#1077;&#1082;&#1089;&#1090;&#1086;&#1074;&#1099;&#1077; &#1087;&#1091;&#1073;&#1083;&#1080;&#1082;&#1072;&#1094;&#1080;&#1080; &#1089; &#1074;&#1080;&#1079;&#1091;&#1072;&#1083;&#1100;&#1085;&#1099;&#1084; &#1082;&#1086;&#1085;&#1090;&#1077;&#1085;&#1090;&#1086;&#1084; (&#1083;&#1080;&#1095;&#1085;&#1099;&#1077; &#1092;&#1086;&#1090;&#1086;, &#1080;&#1085;&#1092;&#1086;&#1075;&#1088;&#1072;&#1092;&#1080;&#1082;&#1072;)&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1057;&#1090;&#1088;&#1091;&#1082;&#1090;&#1091;&#1088;&#1072; &#1090;&#1077;&#1082;&#1089;&#1090;&#1072;: &#1086;&#1087;&#1080;&#1089;&#1072;&#1085;&#1080;&#1077; &#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;, &#1091;&#1089;&#1083;&#1086;&#1074;&#1080;&#1081; &#1086;&#1073;&#1091;&#1095;&#1077;&#1085;&#1080;&#1103;, &#1087;&#1088;&#1077;&#1080;&#1084;&#1091;&#1097;&#1077;&#1089;&#1090;&#1074;, &#1087;&#1088;&#1080;&#1079;&#1099;&#1074; &#1082; &#1076;&#1077;&#1081;&#1089;&#1090;&#1074;&#1080;&#1102;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1063;&#1072;&#1089;&#1090;&#1099;&#1077; &#1092;&#1086;&#1088;&#1084;&#1091;&#1083;&#1080;&#1088;&#1086;&#1074;&#1082;&#1080;: &quot;&#1072;&#1082;&#1090;&#1091;&#1072;&#1083;&#1100;&#1085;&#1072;&#1103; &#1090;&#1077;&#1086;&#1088;&#1080;&#1103;&quot;, &quot;&#1073;&#1086;&#1083;&#1077;&#1077; 400 &#1095;&#1072;&#1089;&#1086;&#1074; &#1087;&#1088;&#1072;&#1082;&#1090;&#1080;&#1082;&#1080;&quot;, &quot;&#1076;&#1080;&#1087;&#1083;&#1086;&#1084; &#1075;&#1086;&#1089;. &#1086;&#1073;&#1088;&#1072;&#1079;&#1094;&#1072;&quot;, &quot;&#1087;&#1086;&#1084;&#1086;&#1097;&#1100; &#1089; &#1090;&#1088;&#1091;&#1076;&#1086;&#1091;&#1089;&#1090;&#1088;&#1086;&#1081;&#1089;&#1090;&#1074;&#1086;&#1084;&quot;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1052;&#1086;&#1075;&#1083;&#1080; &#1073;&#1099; &#1073;&#1099;&#1090;&#1100; &#1089;&#1080;&#1083;&#1100;&#1085;&#1099;&#1084;&#1080;: &#1074;&#1080;&#1076;&#1077;&#1086;&#1080;&#1085;&#1090;&#1077;&#1075;&#1088;&#1072;&#1094;&#1080;&#1080;, &#1080;&#1089;&#1090;&#1086;&#1088;&#1080;&#1080; &#1091;&#1089;&#1087;&#1077;&#1093;&#1072; &#1074;&#1099;&#1087;&#1091;&#1089;&#1082;&#1085;&#1080;&#1082;&#1086;&#1074;, &#1080;&#1085;&#1090;&#1077;&#1088;&#1072;&#1082;&#1090;&#1080;&#1074;&#1085;&#1099;&#1077; &#1092;&#1086;&#1088;&#1084;&#1072;&#1090;&#1099; (&#1085;&#1072;&#1087;&#1088;&#1080;&#1084;&#1077;&#1088;, &#1086;&#1087;&#1088;&#1086;&#1089;&#1099;, &#1090;&#1077;&#1089;&#1090;&#1099;)&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/ul&gt;</span></p><p class="c1"><span class="c0">&lt;/section&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;section id=&quot;pains&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;h2&gt;&#1041;&#1086;&#1083;&#1080; &#1080; &#1087;&#1077;&#1088;&#1089;&#1086;&#1085;&#1072;&#1078;&#1080;&lt;/h2&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;ul&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1041;&#1086;&#1083;&#1080;: &#1085;&#1077;&#1093;&#1074;&#1072;&#1090;&#1082;&#1072; &#1082;&#1074;&#1072;&#1083;&#1080;&#1092;&#1080;&#1094;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1085;&#1099;&#1093; &#1087;&#1089;&#1080;&#1093;&#1086;&#1083;&#1086;&#1075;&#1086;&#1074;, &#1078;&#1077;&#1083;&#1072;&#1085;&#1080;&#1077; &#1089;&#1084;&#1077;&#1085;&#1080;&#1090;&#1100; &#1087;&#1088;&#1086;&#1092;&#1077;&#1089;&#1089;&#1080;&#1102;, &#1089;&#1086;&#1074;&#1084;&#1077;&#1097;&#1077;&#1085;&#1080;&#1077; &#1091;&#1095;&#1077;&#1073;&#1099; &#1080; &#1088;&#1072;&#1073;&#1086;&#1090;&#1099;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1054;&#1089;&#1085;&#1086;&#1074;&#1085;&#1099;&#1077; &#1087;&#1077;&#1088;&#1089;&#1086;&#1085;&#1072;&#1078;&#1080;: &#1083;&#1102;&#1076;&#1080;, &#1078;&#1077;&#1083;&#1072;&#1102;&#1097;&#1080;&#1077; &#1087;&#1086;&#1083;&#1091;&#1095;&#1080;&#1090;&#1100; &#1087;&#1088;&#1086;&#1092;&#1077;&#1089;&#1089;&#1080;&#1102; &#1087;&#1089;&#1080;&#1093;&#1086;&#1083;&#1086;&#1075;&#1072;, &#1074; &#1090;&#1086;&#1084; &#1095;&#1080;&#1089;&#1083;&#1077; &#1074; &#1079;&#1088;&#1077;&#1083;&#1086;&#1084; &#1074;&#1086;&#1079;&#1088;&#1072;&#1089;&#1090;&#1077;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1054;&#1092;&#1092;&#1077;&#1088;&#1085;&#1099;&#1077; &#1092;&#1086;&#1088;&#1084;&#1091;&#1083;&#1080;&#1088;&#1086;&#1074;&#1082;&#1080;: &quot;&#1075;&#1080;&#1073;&#1082;&#1080;&#1081; &#1092;&#1086;&#1088;&#1084;&#1072;&#1090;&quot;, &quot;&#1076;&#1080;&#1087;&#1083;&#1086;&#1084; &#1075;&#1086;&#1089;. &#1086;&#1073;&#1088;&#1072;&#1079;&#1094;&#1072;&quot;, &quot;&#1087;&#1086;&#1084;&#1086;&#1097;&#1100; &#1089; &#1090;&#1088;&#1091;&#1076;&#1086;&#1091;&#1089;&#1090;&#1088;&#1086;&#1081;&#1089;&#1090;&#1074;&#1086;&#1084;&quot;, &quot;&#1082;&#1086;&#1084;&#1087;&#1077;&#1085;&#1089;&#1072;&#1094;&#1080;&#1103; &#1079;&#1072;&#1090;&#1088;&#1072;&#1090; &#1085;&#1072; &#1086;&#1073;&#1091;&#1095;&#1077;&#1085;&#1080;&#1077;&quot;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/ul&gt;</span></p><p class="c1"><span class="c0">&lt;/section&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;section id=&quot;platforms&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;h2&gt;&#1058;&#1077;&#1084;&#1072;&#1090;&#1080;&#1082;&#1080; &#1082;&#1072;&#1085;&#1072;&#1083;&#1086;&#1074;&lt;/h2&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;ul&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1046;&#1077;&#1085;&#1089;&#1082;&#1080;&#1077; &#1087;&#1072;&#1073;&#1083;&#1080;&#1082;&#1080;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1050;&#1072;&#1085;&#1072;&#1083;&#1099; &#1087;&#1086; &#1087;&#1089;&#1080;&#1093;&#1086;&#1083;&#1086;&#1075;&#1080;&#1080;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1040;&#1074;&#1090;&#1086;&#1088;&#1089;&#1082;&#1080;&#1077; &#1082;&#1072;&#1085;&#1072;&#1083;&#1099; &#1087;&#1089;&#1080;&#1093;&#1086;&#1083;&#1086;&#1075;&#1086;&#1074;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1053;&#1086;&#1074;&#1086;&#1089;&#1090;&#1085;&#1099;&#1077; &#1082;&#1072;&#1085;&#1072;&#1083;&#1099;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1051;&#1072;&#1081;&#1092;&#1089;&#1090;&#1072;&#1081;&#1083;-&#1082;&#1072;&#1085;&#1072;&#1083;&#1099; (&#1076;&#1083;&#1103; &#1073;&#1086;&#1083;&#1077;&#1077; &#1084;&#1086;&#1083;&#1086;&#1076;&#1086;&#1081; &#1072;&#1091;&#1076;&#1080;&#1090;&#1086;&#1088;&#1080;&#1080;)&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/ul&gt;</span></p><p class="c1"><span class="c0">&lt;/section&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;section id=&quot;conclusions&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;h2&gt;&#1042;&#1099;&#1074;&#1086;&#1076;&#1099; &#1080; &#1075;&#1080;&#1087;&#1086;&#1090;&#1077;&#1079;&#1099;&lt;/h2&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;ul&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1050;&#1086;&#1085;&#1082;&#1091;&#1088;&#1077;&#1085;&#1090;&#1099; &#1076;&#1077;&#1083;&#1072;&#1102;&#1090; &#1091;&#1087;&#1086;&#1088; &#1085;&#1072; &#1087;&#1088;&#1072;&#1082;&#1090;&#1080;&#1082;&#1086;-&#1086;&#1088;&#1080;&#1077;&#1085;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1085;&#1086;&#1089;&#1090;&#1100; &#1086;&#1073;&#1091;&#1095;&#1077;&#1085;&#1080;&#1103;, &#1075;&#1080;&#1073;&#1082;&#1086;&#1089;&#1090;&#1100; &#1092;&#1086;&#1088;&#1084;&#1072;&#1090;&#1072;, &#1075;&#1086;&#1089;&#1091;&#1076;&#1072;&#1088;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1099;&#1081; &#1076;&#1080;&#1087;&#1083;&#1086;&#1084;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1069;&#1092;&#1092;&#1077;&#1082;&#1090;&#1080;&#1074;&#1085;&#1099; &#1084;&#1077;&#1093;&#1072;&#1085;&#1080;&#1082;&#1080; &#1089;&#1086; &#1089;&#1082;&#1080;&#1076;&#1082;&#1072;&#1084;&#1080;, &#1087;&#1088;&#1086;&#1084;&#1086;&#1082;&#1086;&#1076;&#1072;&#1084;&#1080;, &#1075;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1103;&#1084;&#1080;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1058;&#1077;&#1082;&#1089;&#1090;&#1099; &#1079;&#1072;&#1095;&#1072;&#1089;&#1090;&#1091;&#1102; &#1074;&#1099;&#1075;&#1083;&#1103;&#1076;&#1103;&#1090; &#1089;&#1083;&#1080;&#1096;&#1082;&#1086;&#1084; &#1088;&#1077;&#1082;&#1083;&#1072;&#1084;&#1085;&#1086;, &#1089;&#1090;&#1086;&#1080;&#1090; &#1087;&#1088;&#1086;&#1073;&#1086;&#1074;&#1072;&#1090;&#1100; &#1073;&#1086;&#1083;&#1077;&#1077; &#1085;&#1072;&#1090;&#1080;&#1074;&#1085;&#1099;&#1077; &#1092;&#1086;&#1088;&#1084;&#1072;&#1090;&#1099;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1057;&#1090;&#1086;&#1080;&#1090; &#1087;&#1088;&#1086;&#1090;&#1077;&#1089;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1090;&#1100; &#1074;&#1080;&#1076;&#1077;&#1086;&#1092;&#1086;&#1088;&#1084;&#1072;&#1090;&#1099;, &#1080;&#1089;&#1090;&#1086;&#1088;&#1080;&#1080; &#1091;&#1089;&#1087;&#1077;&#1093;&#1072;, &#1080;&#1085;&#1090;&#1077;&#1088;&#1072;&#1082;&#1090;&#1080;&#1074;&#1085;&#1099;&#1077; &#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1099; &#1076;&#1083;&#1103; &#1073;&#1086;&#1083;&#1100;&#1096;&#1077;&#1081; &#1074;&#1086;&#1074;&#1083;&#1077;&#1095;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1080; &#1072;&#1091;&#1076;&#1080;&#1090;&#1086;&#1088;&#1080;&#1080;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1052;&#1086;&#1078;&#1085;&#1086; &#1074;&#1099;&#1076;&#1077;&#1083;&#1080;&#1090;&#1100;&#1089;&#1103; &#1079;&#1072; &#1089;&#1095;&#1077;&#1090; &#1073;&#1086;&#1083;&#1077;&#1077; &#1075;&#1083;&#1091;&#1073;&#1086;&#1082;&#1086;&#1081; &#1087;&#1088;&#1086;&#1088;&#1072;&#1073;&#1086;&#1090;&#1082;&#1080; &#1087;&#1077;&#1088;&#1089;&#1086;&#1085;&#1072;&#1078;&#1077;&#1081;, &#1080;&#1093; &#1073;&#1086;&#1083;&#1077;&#1081; &#1080; &#1087;&#1086;&#1090;&#1088;&#1077;&#1073;&#1085;&#1086;&#1089;&#1090;&#1077;&#1081;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/ul&gt;</span></p><p class="c1"><span class="c0">&lt;/section&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;div class=&quot;hypotheses&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;h2&gt;&#1043;&#1080;&#1087;&#1086;&#1090;&#1077;&#1079;&#1099; &#1076;&#1083;&#1103; &#1090;&#1077;&#1089;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103;&lt;/h2&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;ul&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077; &#1074;&#1080;&#1076;&#1077;&#1086;&#1092;&#1086;&#1088;&#1084;&#1072;&#1090;&#1086;&#1074; &#1074; &#1088;&#1077;&#1082;&#1083;&#1072;&#1084;&#1077;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1057;&#1086;&#1079;&#1076;&#1072;&#1085;&#1080;&#1077; &#1080;&#1085;&#1090;&#1077;&#1088;&#1072;&#1082;&#1090;&#1080;&#1074;&#1085;&#1099;&#1093; &#1087;&#1086;&#1089;&#1090;&#1086;&#1074; &#1080; &#1086;&#1087;&#1088;&#1086;&#1089;&#1086;&#1074;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&#1048;&#1089;&#1090;&#1086;&#1088;&#1080;&#1080; &#1091;&#1089;&#1087;&#1077;&#1093;&#1072; &#1074;&#1099;&#1087;&#1091;&#1089;&#1082;&#1085;&#1080;&#1082;&#1086;&#1074; &#1082;&#1072;&#1082; &#1086;&#1089;&#1085;&#1086;&#1074;&#1085;&#1086;&#1081; &#1082;&#1086;&#1085;&#1090;&#1077;&#1085;&#1090;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/ul&gt;</span></p><p class="c1"><span class="c0">&lt;/div&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;script&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; function showSection(sectionId) {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const sections = document.querySelectorAll(&#39;section&#39;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; sections.forEach(section =&gt; {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; section.classList.remove(&#39;active&#39;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; });</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(sectionId).classList.add(&#39;active&#39;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&lt;/script&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;/body&gt;</span></p><p class="c1"><span class="c0">&lt;/html&gt;</span></p><p class="c1 c2"><span class="c0"></span></p></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отчет по конкурентному анализу</title>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0071e3;
+            --primary-hover: #0077ed;
+            --secondary: #5856d6;
+            --accent: #ff9500;
+            --success: #34c759;
+            --pink: #ff2d55;
+            --teal: #5ac8fa;
+            --bg: #f5f5f7;
+            --bg-card: #ffffff;
+            --text-primary: #1d1d1f;
+            --text-secondary: #86868b;
+            --text-tertiary: #6e6e73;
+            --border: rgba(0,0,0,0.08);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+            --radius-sm: 12px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255,255,255,0.72);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.375rem;
+            box-shadow: 0 4px 12px rgba(0,113,227,0.3);
+        }
+
+        .logo-text h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text span {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            gap: 0.375rem;
+            background: rgba(0,0,0,0.04);
+            padding: 4px;
+            border-radius: var(--radius-sm);
+        }
+
+        .nav-btn {
+            padding: 0.625rem 1rem;
+            background: transparent;
+            border: none;
+            border-radius: 8px;
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .nav-btn:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-btn.active {
+            background: white;
+            color: var(--text-primary);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+
+        /* Main content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+        }
+
+        /* Sections */
+        .section {
+            display: none;
+            animation: fadeSlide 0.4s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeSlide {
+            from { 
+                opacity: 0; 
+                transform: translateY(12px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        .section-header {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-tertiary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        /* Cards grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-icon.blue { background: linear-gradient(135deg, rgba(0,113,227,0.12) 0%, rgba(88,86,214,0.12) 100%); }
+        .card-icon.pink { background: linear-gradient(135deg, rgba(255,45,85,0.1) 0%, rgba(255,149,0,0.1) 100%); }
+        .card-icon.teal { background: linear-gradient(135deg, rgba(90,200,250,0.15) 0%, rgba(52,199,89,0.1) 100%); }
+        .card-icon.orange { background: linear-gradient(135deg, rgba(255,149,0,0.12) 0%, rgba(255,45,85,0.08) 100%); }
+
+        .card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .card p, .card li {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            padding: 0.375rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+
+        .card li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.75rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+
+        /* Tags */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .tag {
+            padding: 0.4rem 0.875rem;
+            background: rgba(0,113,227,0.08);
+            border-radius: 20px;
+            font-size: 0.8125rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0,113,227,0.06) 0%, rgba(88,86,214,0.04) 100%);
+            border-radius: var(--radius-sm);
+            padding: 1rem 1.25rem;
+            margin-top: 1rem;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary);
+            margin-bottom: 0.375rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .highlight-box p {
+            font-size: 0.875rem;
+        }
+
+        /* Platform badges */
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+        }
+
+        .platform-item {
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            padding: 1.125rem 1.25rem;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .platform-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .platform-item .icon {
+            font-size: 1.5rem;
+        }
+
+        .platform-item .name {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* Hypotheses */
+        .hypotheses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .hypothesis-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            padding: 1.75rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .hypothesis-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .hypothesis-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .hypothesis-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: rgba(0,113,227,0.08);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .hypothesis-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .hypothesis-card p {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+
+        /* Section divider */
+        .section-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 2.5rem 0;
+            border: none;
+        }
+
+        .subsection-title {
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            .nav-btn {
+                padding: 0.5rem 0.875rem;
+                font-size: 0.8rem;
+                white-space: nowrap;
+            }
+
+            main {
+                padding: 1.5rem 1rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .cards-grid,
+            .hypotheses-grid,
+            .platform-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">📊</div>
+                <div class="logo-text">
+                    <h1>Конкурентный анализ</h1>
+                    <span>Исследование рынка</span>
+                </div>
+            </div>
+            <nav>
+                <button class="nav-btn active" onclick="showSection('funnels')">Воронки</button>
+                <button class="nav-btn" onclick="showSection('creatives')">Креативы</button>
+                <button class="nav-btn" onclick="showSection('pains')">Боли</button>
+                <button class="nav-btn" onclick="showSection('platforms')">Площадки</button>
+                <button class="nav-btn" onclick="showSection('conclusions')">Выводы</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Воронки -->
+        <section id="funnels" class="section active">
+            <div class="section-header">
+                <h2 class="section-title">Воронки продаж</h2>
+                <p class="section-subtitle">Анализ точек входа и маршрутов пользователей</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon blue">🚪</div>
+                    <h3>Точки входа</h3>
+                    <ul>
+                        <li>Тематические Telegram-каналы</li>
+                        <li>Блоги и статьи</li>
+                        <li>Тематические сообщества в соцсетях</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon teal">🛤️</div>
+                    <h3>Маршруты пользователей</h3>
+                    <ul>
+                        <li>Сайт с курсами</li>
+                        <li>Telegram-канал института</li>
+                        <li>Бот в Telegram</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon pink">🎁</div>
+                    <h3>Механики вовлечения</h3>
+                    <ul>
+                        <li>Промокоды и скидки</li>
+                        <li>Бонусы за регистрацию</li>
+                        <li>Гарантии трудоустройства</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Креативы -->
+        <section id="creatives" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Креативы</h2>
+                <p class="section-subtitle">Форматы и подходы к контенту</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon blue">📝</div>
+                    <h3>Форматы контента</h3>
+                    <ul>
+                        <li>Текстовые публикации</li>
+                        <li>Личные фото</li>
+                        <li>Инфографика</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon teal">📐</div>
+                    <h3>Структура текста</h3>
+                    <ul>
+                        <li>Описание программ</li>
+                        <li>Условия обучения</li>
+                        <li>Преимущества</li>
+                        <li>Призыв к действию</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon orange">💬</div>
+                    <h3>Частые формулировки</h3>
+                    <div class="tags">
+                        <span class="tag">актуальная теория</span>
+                        <span class="tag">400+ часов практики</span>
+                        <span class="tag">диплом гос. образца</span>
+                        <span class="tag">помощь с трудоустройством</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon pink">🚀</div>
+                    <h3>Потенциал улучшения</h3>
+                    <ul>
+                        <li>Видеоинтеграции</li>
+                        <li>Истории успеха выпускников</li>
+                        <li>Интерактивные форматы (опросы, тесты)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Боли -->
+        <section id="pains" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Боли и персонажи</h2>
+                <p class="section-subtitle">Понимание аудитории и её потребностей</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon pink">😣</div>
+                    <h3>Боли аудитории</h3>
+                    <ul>
+                        <li>Нехватка квалифицированных психологов</li>
+                        <li>Желание сменить профессию</li>
+                        <li>Совмещение учёбы и работы</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon blue">👤</div>
+                    <h3>Основные персонажи</h3>
+                    <p>Люди, желающие получить профессию психолога, в том числе в зрелом возрасте</p>
+                    <div class="highlight-box">
+                        <h4>💡 Ключевое понимание</h4>
+                        <p>Аудитория ищет гибкость и гарантии результата</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon teal">✨</div>
+                    <h3>Офферные формулировки</h3>
+                    <div class="tags">
+                        <span class="tag">гибкий формат</span>
+                        <span class="tag">диплом гос. образца</span>
+                        <span class="tag">помощь с трудоустройством</span>
+                        <span class="tag">компенсация затрат</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Площадки -->
+        <section id="platforms" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Тематики каналов</h2>
+                <p class="section-subtitle">Где размещается реклама конкурентов</p>
+            </div>
+
+            <div class="platform-grid">
+                <div class="platform-item">
+                    <span class="icon">👩</span>
+                    <span class="name">Женские паблики</span>
+                </div>
+                <div class="platform-item">
+                    <span class="icon">🧠</span>
+                    <span class="name">Каналы по психологии</span>
+                </div>
+                <div class="platform-item">
+                    <span class="icon">✍️</span>
+                    <span class="name">Авторские каналы психологов</span>
+                </div>
+                <div class="platform-item">
+                    <span class="icon">📰</span>
+                    <span class="name">Новостные каналы</span>
+                </div>
+                <div class="platform-item">
+                    <span class="icon">🎮</span>
+                    <span class="name">Лайфстайл-каналы</span>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 2rem;">
+                <h4>💡 Рекомендация</h4>
+                <p>Для охвата разной аудитории рекомендуется использовать комбинацию нескольких типов каналов</p>
+            </div>
+        </section>
+
+        <!-- Выводы -->
+        <section id="conclusions" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Выводы и гипотезы</h2>
+                <p class="section-subtitle">Ключевые инсайты и направления для тестирования</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon blue">🎯</div>
+                    <h3>Ключевые выводы</h3>
+                    <ul>
+                        <li>Упор на практико-ориентированность обучения</li>
+                        <li>Гибкость формата</li>
+                        <li>Государственный диплом</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon orange">⚡</div>
+                    <h3>Эффективные механики</h3>
+                    <ul>
+                        <li>Скидки и промокоды</li>
+                        <li>Гарантии трудоустройства</li>
+                        <li>Компенсация затрат на обучение</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon pink">🔧</div>
+                    <h3>Точки улучшения</h3>
+                    <ul>
+                        <li>Тексты слишком рекламные</li>
+                        <li>Нужны более нативные форматы</li>
+                        <li>Глубокая проработка персонажей</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <h3 class="subsection-title">🧪 Гипотезы для тестирования</h3>
+
+            <div class="hypotheses-grid">
+                <div class="hypothesis-card">
+                    <div class="hypothesis-number">01</div>
+                    <h3>Видеоформаты</h3>
+                    <p>Использование видеоформатов в рекламе для повышения вовлечённости и доверия аудитории</p>
+                </div>
+
+                <div class="hypothesis-card">
+                    <div class="hypothesis-number">02</div>
+                    <h3>Интерактивный контент</h3>
+                    <p>Создание интерактивных постов и опросов для увеличения охватов и вовлечения</p>
+                </div>
+
+                <div class="hypothesis-card">
+                    <div class="hypothesis-number">03</div>
+                    <h3>Истории успеха</h3>
+                    <p>Истории успеха выпускников как основной контент для социального доказательства</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="footer">
+        Конкурентный анализ • Исследование рынка образовательных услуг
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
